@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Refer my Patient</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .map-key {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        .map-key th, .map-key td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+
+<script type="text/javascript">
+    var password = prompt("Please enter the password:");
+
+    if (password !== "SaveLives1") {
+        alert("Incorrect password. You will be redirected.");
+        window.location.href = "https://www.google.com"; 
+    }
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <h1 class="map-title">Refer My Patient</h1>
+    <p class="disclaimer"><i>*This tool does not provide clinical knowledge. It is intended for research purposes only.*</i></p>
+
+    <div class="expandable-section"> 
+        <button class="expand-button">Click here to view the map key</button>
+        <div class="expand-content">
+            <table class="map-key">
+            </tr>
+
+            <tr>
+                <th>
+                    <img src="youarehere.png" alt="You Are Here Indicator" class="key-image" width="50" height="50">
+                </th>
+                <td>
+                    This will automatically locate you to your current donor service area (DSA) for your Organ Procurement Organization (OPO)
+                </td>
+                <tr>
+                    <th>
+                        <img src="blue-pin.png" alt="Blue Pin Indicator" class="key-image" width="50" height="50">
+                    </th>
+                    <td>
+                        Click to reveal the OPOs clinical triggers <i>*please zoom in on more crowded states for clarity*</i>
+                    </td>
+                
+                </tr>
+                <tr>
+                    <th>
+                        <img src="GCS.png" alt="GCS Indicator" class="key-image" width="60" height="40">
+                    </th>
+                    <td>
+                        Indicates an OPO that utilizes Glasgow Coma Scale (GCS) in their clinical triggers <b>(38 OPOs total)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="BSR.png" alt="BSR Indicator" class="key-image" width="30" height="30">
+                    </th>
+                    <td>
+                        Indicates an OPO that utilizes brainstem reflexes in their clinical triggers <b>(30 OPOs total)</b>
+                    </td>
+                </tr>
+              
+                <tr>
+                    <th>
+                        <img src="star.png" alt="Star Indicator" class="key-image" width="50" height="50">
+                    </th>
+                    <td>
+                        Indicates a top 10 performing OPOs per Tier via Centers for Medicare and Medicaid Services (CMS) 2021 rankings <i>*for more information, please visit <a href="https://www.opodata.org/" target="_blank">https://www.opodata.org/</a>*</i>
+                    </td>
+                
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+
+    <div class="expandable-section">
+        <button class="expand-button">Click here to view an index of historical clinical triggers for each OPO</button>
+        <div class="expand-content">
+            <p>1. <b>Legacy of Hope (prior to January of 2022):</b> Call AOC within ONE HOUR if the ventilated patient exhibits THREE of the following: pupillary response, cough, corneal reflex, gag, response to painful stimuli, spontaneous respirations OR withdrawl of life sustaining therapies (including pressor support) is being considered and death is likely to occur. *Hypothermia protocol patients may meet clinical triggers.</p>
+            <p>2. Arkansas Regional Organ Recovery Agency: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>3. Donor Network of Arizona: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>4. Donor Network West: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>5. <b>Sierra Donor Services:</b> Sierra Donor Services reports use of the the current clinical triggers since January of 2023. <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>6. OneLegacy: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>7. Lifesharing: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>8. <b>Donor Alliance:</b> Donor Alliance reported use of the current clinical triggers since 2013.</p>
+            <p>9. <b>Our Legacy:</b> Our Legacy reports use of the current clinical triggers since 2020.</p>
+            <p>10. Life Alliance Organ Recovery Agency: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>11. <b>LifeQuest:</b> LifeQuest reports use of the current clinical triggers since 2006.</p>
+            <p>12. LifeLink of Florida: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>13. <b>LifeLink of Georgia:</b> LifeLink of Georgia reported use of the current clinical triggers since September of 2022.</p>
+            <p>14. Legacy of Life Hawaii: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>15. <b>Iowa Donor Network: </b> Iowa Donor Network reports use of the current clinical triggers since 2013.</p>
+            <p>16. <b>Gift of Hope: </b> Gift of Hope reports use of the current clinical triggers since January of 2022.</p>
+            <p>17. Indiana Donor Network: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>18. Kentucky Organ Donor Affiliates: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>19. Louisiana Organ Procurement Agency: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>20. <b>New England Donor Services:</b> New England Donor Services reports use of the current clinical triggers since 2019.</p>
+            <p>21. <b>Infinite Legacy:</b> Infinite Legacy reports use of the current clinical triggers since 2023.</p>
+            <p>22. Gift of Life Michigan:  <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>23. <b>LifeSource:</b> LifeSource reports use of the current clinical triggers since 2020.</p>
+            <p>24. <b>Mid-America Transplant Services:</b> Prior to 2021, Mid-America Transplant Services reports their clinical triggers were: GCS >5 AND absence of 2 or more brainstem reflexes.</p>
+            <p>25. Mississippi Organ Recovery Agency: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>26. <b>Midwest Transplant Network: </b> Midwest Transplant Network reports use of the current clinical triggers since 2021.</p>
+            <p>27. LifeShare Carolinas: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>28. HonorBridge: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>29. <b>Live On Nebraska:</b> Live on Nebraska reports use of the current clinical triggers since 2017. The only difference between now and then was we asked for a call if there was a change to the DNR status or considering comfort care.</p>
+            <p>30. <b>New Jersey Sharing Network:</b> New Jersey Sharing Network reports use of the current clinical triggers since 2020.</p>
+            <p>31. <b>New Mexico Donor Services:</b> New Mexico Donor Services reports use of the current clinical triggers since 2023.</p>
+            <p>32. Nevada Donor Services: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>33. Center for Donation and Transplant: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>34. Finger Lakes Donor Recovery Network: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>35. LifeOn NY: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>36. <b>Upstate NY Transplant Services: </b> Upstate NY Transplant Services reports use of the current clinical triggers since 2010.</p>
+            <p>37. LifeBanc: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>38. LifeConnection: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>39. LifeLine of Ohio: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>40. LifeCenter Organ Donor Network: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>41. LifeShare of Oklahoma: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>42. Cascade Life Alliance: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>43. Gift of Life: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>44. <b>CORE:</b> CORE reports use of the current clinical triggers since 2020. Prior, the clinical triggers were GCS 5 or less, irreversible brain damage, ventilator dependent, and end of life decisions being made.</p>
+            <p>45. LifeLink of PR: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>46. <b>We Are Sharing Hope SC:</b> We Are Sharing Hope SC reports use of the current clinical triggers since  August of 2022.</p>
+            <p>47. <b>Tennessee Donor Services:</b> Tennessee Donor Services reports use of the current clinical triggers since March of 2023.</p>
+            <p>48. Mid-South Transplant Foundation: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>49. LifeGift: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>50. <b>Texas Organ Sharing Alliance:</b> Texas Organ Sharing Alliance reports use of the current clinical triggers since 2022. Prior, the clinical triggers were neuro insult, ventilated, GCS of 5 or less (or 3 absent brainstem reflexes).</p>
+            <p>51. <b>Southwest Transplant Alliance</b>: Southwest Transplant Alliance reports use of the current clinical triggers since 2021.</p>
+            <p>52. DonorConnect: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>53. LifeNet Health: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+            <p>54. <b>LifeCenter Northwest:</b> LifeCenter Northwest reports use of the current clinical triggers since 2021.</p>
+            <p>55. <b>UW Health Organ and Tissue Donation:</b> UW Health Organ and Tissue Donation reports use of the current clinical triggers since 2006.</p>
+            <p>56. Versiti Wisconsin Inc: <i>This OPO did not respond concerning historical clinical triggers despite multiple attempts to contact this OPO.</i></p>
+        </div>
+
+        <a href="https://opo-dashboard.herokuapp.com/" target="_blank">Click here to see a visualization of OPO practice conditions and performance for the period 2010-2020</a>
+
+
+    </div>
+
+    <div class="container">
+        <div id="mapid"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        var expandButtons = document.getElementsByClassName("expand-button");
+
+        for (var i = 0; i < expandButtons.length; i++) {
+            expandButtons[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
